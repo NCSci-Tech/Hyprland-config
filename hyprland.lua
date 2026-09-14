@@ -323,6 +323,15 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
+-- Copy a selected region directly to the clipboard
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
+
+-- Save a selected region to a timestamped file in your Pictures folder
+hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" ~/Pictures/Screenshots/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png'))
+
+-- Capture the entire screen and copy to clipboard
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim - | wl-copy'))
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
