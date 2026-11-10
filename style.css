@@ -77,30 +77,12 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
-    padding: 0 10px;
-    color: #ffffff;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
+#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight, #network, 
+#pulseaudio, #wireplumber, #custom-media, #tray, #mode, #idle_inhibitor, 
+#scratchpad, #power-profiles-daemon, #window, #workspaces, #custom-power, #keyboard-state {
+    margin: 3px 2px;     /* Subtle spacing between blocks and top/bottom edges */
+    padding: 0 8px;      /* Generous side padding inside the colored boxes */
+    border-radius: 4px;  /* Optional: rounds the harsh edges slightly for a capsule look */
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -254,23 +236,6 @@ label:focus {
 #idle_inhibitor.activated {
     background-color: #ecf0f1;
     color: #2d3436;
-}
-
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
 }
 
 #language {
